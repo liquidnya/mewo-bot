@@ -4,7 +4,9 @@ import { compileText } from "./command/compiler.js";
 import { User } from "./command/types.js";
 import { CommandContext, GlobalContext } from "./command/context.js";
 import { compileContext } from "./command/built-in.js";
+import * as commands from "mewo-commands";
 
+console.log(`sum: ${commands.sum(2,3)}`);
 
 const parseResult = parser.parse(Streams.ofString("Hello ${<name>}... ${They} ${sender.are} cute! The time is ${time('Europe/Vienna')}."));
 const runner = compileText(compileContext, parseResult.value);

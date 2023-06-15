@@ -1,9 +1,17 @@
 {
   "extends": "@tsconfig/node20/tsconfig.json",
   "compilerOptions": {
-    "outDir": "build",
     "allowJs": false,
     "moduleResolution": "node16"
   },
-  "include": ["src/**/*"]
+  "files": [],
+  "include": [],
+  "exclude": [
+    "**/node_modules"
+  ],
+  "references": [
+    {
+      "path": "./mewo-core"
+    }
+  ]
 }
